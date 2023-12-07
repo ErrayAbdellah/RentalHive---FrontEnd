@@ -1,3 +1,7 @@
 <div class="container mt-5">
     <h1 class="fw-bold text-color pb-3">Equipments</h1>
+    <div *ngFor="let equipment of equipmentList">
+        <div>{{ equipment.name }}</div>
+        <div>{{ equipment.price }}</div>
+    </div>
 </div>
