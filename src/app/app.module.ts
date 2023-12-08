@@ -7,7 +7,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { EquipmentComponent } from './components/equipment/equipment.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReservationComponent } from './reservation/reservation/reservation.component';
+import { ReservationModalComponent } from './components/reservation/reservation-modal/reservation-modal.component';
+import { ReservationComponent } from './components/reservation/reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ReservationComponent } from './reservation/reservation/reservation.comp
     NavbarComponent,
     HomePageComponent,
     EquipmentComponent,
+    ReservationModalComponent,
     ReservationComponent,
   ],
   imports: [

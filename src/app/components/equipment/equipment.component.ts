@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EquipmentService } from 'src/app/Services/equipmentService/equipment.service';
 import { Equipment } from 'src/app/models/equipment';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-equipment',
@@ -30,4 +31,9 @@ export class EquipmentComponent implements OnInit {
       }
     );
   }
+
+  // openReservationModal(equipment: Equipment, content: any): void {
+  //   const modalRef = this.modalService.open(content, { centered: true });
+  //   modalRef.componentInstance.equipment = equipment;
+  // }
 }
