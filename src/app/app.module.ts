@@ -7,13 +7,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { EquipmentComponent } from './components/equipment/equipment.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReservationComponent } from './reservation/reservation/reservation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomePageComponent,
-    EquipmentComponent
+    EquipmentComponent,
+    ReservationComponent,
   ],
   imports: [
     BrowserModule,
