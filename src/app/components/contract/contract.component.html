@@ -1,0 +1,29 @@
+
+<div class = "row">
+  <h2> Contract List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+  <thead>
+      <tr>
+          <th></th>
+          <th> contractID </th>
+          <th> contractDescription </th>
+          <th> contract status</th>
+          <th> contractEndDate</th>
+          <th> contractID </th>
+          <th> Actions </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let contract of contracts" >
+          <td> {{ contract.contractId }} </td>
+          <td> {{  contract.description}} </td>
+          <td>{{contract.status}}</td>
+          <td> {{ contract.StartDate}} </td>
+          <td> {{ contract.EndDate }} </td>
+          <td>
+          </td>
+      </tr>
+  </tbody>
+</table>
