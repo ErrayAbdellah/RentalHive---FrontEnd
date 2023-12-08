@@ -8,6 +8,8 @@ import { Equipment } from 'src/app/models/equipment';
   styleUrls: ['./equipment.component.css'],
 })
 export class EquipmentComponent implements OnInit {
+  equipmentUrl: string = 'assets/img/640x518.webp';
+
   equipmentList: Equipment[] = [];
 
   constructor(private equipmentService: EquipmentService) {}
