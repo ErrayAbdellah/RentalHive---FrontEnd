@@ -1,40 +1,49 @@
-<div class="container mt-5 mb-5">
-    <h1 class="fw-bold text-color pb-3">Reservation Form</h1>
-    <form (ngSubmit)="onSubmit()" class="mt-4">
-        <div class="mb-3">
-            <label for="userId" class="form-label">User ID:</label>
-            <input type="number" id="userId" [(ngModel)]="reservation.userId" name="userId" class="form-control" required>
-        </div>
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="col-6">
+        <h1 class="fw-bold text-color pb-3">Reservation Form</h1>
+        <div class="card card-menu p-3 mt-4">
+            <form (ngSubmit)="onSubmit()" class="mt-4">
+                <div class="mb-3">
+                    <label for="userId" class="form-label">User ID:</label>
+                    <input type="number" id="userId" [(ngModel)]="reservation.userId" name="userId" class="form-control" required>
+                </div>
 
-        <div class="mb-3">
-            <label for="dateRetour" class="form-label">Date Retour:</label>
-            <input type="date" id="dateRetour" [(ngModel)]="reservation.dateRetour" name="dateRetour" class="form-control" required>
+                <div class="mb-3">
+                    <label for="demandeDate" class="form-label">Date Demande:</label>
+                    <input type="date" id="demandeDate" [(ngModel)]="reservation.demandeDate" name="demandeDate" class="form-control" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="dateRetour" class="form-label">Date Retour:</label>
+                    <input type="date" id="dateRetour" [(ngModel)]="reservation.dateRetour" name="dateRetour" class="form-control" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="reference" class="form-label">Reference:</label>
+                    <input type="number" id="reference" [(ngModel)]="reservation.reference" name="reference" class="form-control">
+                </div>
+        
+                <div class="mb-3">
+                    <label for="priorite" class="form-label">Priorite:</label>
+                    <select id="priorite" [(ngModel)]="reservation.priorite" name="priorite" class="form-select" required>
+                        <option value="tresEleve">Très élevé</option>
+                        <option value="Eleve">Élevé</option>
+                        <option value="Moyen">Moyen</option>
+                        <option value="Faible">Faible</option>
+                    </select>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="state" class="form-label">State:</label>
+                    <select id="state" [(ngModel)]="reservation.state" name="state" class="form-select" required>
+                        <option value="EN_ATTENTE">En attente</option>
+                        <option value="EN_COURS">En cours</option>
+                        <option value="COMPLETEE">Complétée</option>
+                        <option value="ANNULEE">Annulée</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Reserve</button>
+            </form>
         </div>
-
-        <div class="mb-3">
-            <label for="reference" class="form-label">Reference:</label>
-            <input type="number" id="reference" [(ngModel)]="reservation.reference" name="reference" class="form-control">
-        </div>
-
-        <div class="mb-3">
-            <label for="priorite" class="form-label">Priorite:</label>
-            <select id="priorite" [(ngModel)]="reservation.priorite" name="priorite" class="form-select" required>
-                <option value="tresEleve">Très élevé</option>
-                <option value="Eleve">Élevé</option>
-                <option value="Moyen">Moyen</option>
-                <option value="Faible">Faible</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <label for="state" class="form-label">State:</label>
-            <select id="state" [(ngModel)]="reservation.state" name="state" class="form-select" required>
-                <option value="EN_ATTENTE">En attente</option>
-                <option value="EN_COURS">En cours</option>
-                <option value="COMPLETEE">Complétée</option>
-                <option value="ANNULEE">Annulée</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Reserve</button>
-    </form>
+    </div>
 </div>

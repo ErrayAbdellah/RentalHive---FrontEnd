@@ -38,14 +38,12 @@ export class ReservationFormComponent implements OnInit {
     });
     console.log(this.reservation.equipmentIds);
     
-    
-    this.reservation.demandeDate = formatDate(new Date(), 'yyyy-MM-ddTHH:mm:ss', 'en-US');
   }
   
   onSubmit(): void {
     const requestData: Demande = {
       userId: this.reservation.userId,
-      demandeDate: this.reservation.demandeDate,
+      demandeDate: formatDate(new Date(this.reservation.demandeDate), 'yyyy-MM-ddTHH:mm:ss', 'en-US'),
       dateRetour: formatDate(new Date(this.reservation.dateRetour), 'yyyy-MM-ddTHH:mm:ss', 'en-US'),
       reference: this.reservation.reference,
       priorite: this.reservation.priorite,
@@ -58,6 +56,7 @@ export class ReservationFormComponent implements OnInit {
     this.demandeService.createDemande(requestData).subscribe(
       (response) => {
         console.log('Reservation saved successfully:', response);
+        this.router.navigate(['/reservation']);
       },
       (error) => {
         console.error('Error creating reservation:', error);

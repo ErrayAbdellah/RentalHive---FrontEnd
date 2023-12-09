@@ -7,7 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { EquipmentComponent } from './components/equipment/equipment.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReservationComponent } from './components/reservation/reservation/reservation.component';
+import { ReservationComponent } from './components/reservation/reservation.component';
 import { ReservationFormComponent } from './components/reservation/reservation-form/reservation-form.component';
 import { FormsModule } from '@angular/forms';
 
