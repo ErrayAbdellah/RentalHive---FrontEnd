@@ -1,11 +1,17 @@
 <div class="container mt-5 mb-5">
-    <h1 class="fw-bold text-color pb-3">Equipments</h1>
+    <div class="d-flex justify-content-between">
+        <h1 class="fw-bold text-color pb-3">Equipments</h1>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-warning" data-mdb-ripple-init data-mdb-ripple-color="dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Launch static backdrop modal
+        </button>
+    </div>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 mt-5">
         <div class="col" *ngFor="let equipment of equipmentList">
             <div class="card card-menu btn bg-white mb-3 p-0" style="background-color: white !important;">
                 <div class="">
-                    <img [src]="equipmentUrl" class="img-fluid img-form" />
+                    <img src="{{equipment.image}}" class="img-fluid img-form" />
                     <a href="#!">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                     </a>
@@ -32,3 +38,5 @@
         </div>
     </div>
 </div>
+
+<app-save-equipment></app-save-equipment>

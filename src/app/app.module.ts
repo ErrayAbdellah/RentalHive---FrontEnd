@@ -8,6 +8,12 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { EquipmentComponent } from './components/equipment/equipment.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReservationComponent } from './reservation/reservation/reservation.component';
+import { SaveEquipmentComponent } from './components/save-equipment/save-equipment.component';
+import { FormsModule } from '@angular/forms';
+
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage'
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,11 +22,15 @@ import { ReservationComponent } from './reservation/reservation/reservation.comp
     HomePageComponent,
     EquipmentComponent,
     ReservationComponent,
+    SaveEquipmentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

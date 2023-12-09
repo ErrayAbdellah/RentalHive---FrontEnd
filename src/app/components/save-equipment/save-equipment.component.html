@@ -1,0 +1,45 @@
+<p>save-equipment works!</p>
+<!-- 
+equipmentId: number;
+name: string;
+price: number;
+image: string;
+category: string; 
+-->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (submit)="onSubmit()">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" [(ngModel)]="equipment.name" name="name" class="form-control" id="name">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" [(ngModel)]="equipment.price" name="price" class="form-control" id="price">
+              </div>
+              <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select name="category" class="form-select" [(ngModel)]="equipment.category" aria-label="Category">
+                  <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Image</label>
+                <input class="form-control"  type="file" [(ngModel)]="equipment.image" name="image" id="image_equipment" multiple>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
