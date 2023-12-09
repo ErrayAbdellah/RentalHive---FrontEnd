@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
-import { NgForm } from '@angular/forms';
-import { from } from 'rxjs';
-import { EquipmentService } from 'src/app/Services/equipment.service';
+// import { EquipmentService } from 'src/app/Services/equipment.service';
 import { SaveEquipmentService } from 'src/app/Services/save-equipment/save-equipment.service';
 import { Equipment } from 'src/app/models/equipment';
 @Component({

@@ -31,12 +31,14 @@
                         <p class="lead fw-bold">Category</p>
                         <div class="chip"><span class="chip-content">{{ equipment.category }}</span></div>
                     </div>
-                    <button class="btn btn-outline-primary btn-rounde rounded-4 btn-block my-4 z-depth-0 w-75 fs-6"
-                    type="submit">Reserve</button>
+                    <button class="btn btn-outline-primary btn-rounded rounded-4 btn-block my-4 z-depth-0 w-75 fs-6" 
+                            type="button" 
+                            (click)="reserveEquipment(equipment)">
+                        Reserve
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<app-save-equipment></app-save-equipment>
