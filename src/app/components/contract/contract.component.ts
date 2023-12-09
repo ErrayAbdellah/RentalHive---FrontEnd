@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ContractComponent implements OnInit{
 
+  contractTitle : string = "The list of the contracts";
   contracts: any[] | undefined;
 
   constructor(private contratService :ContratService)
@@ -24,6 +25,7 @@ export class ContractComponent implements OnInit{
     this.contratService.getContractlist().subscribe(data=>
       {
         this.contracts = data;
+
 
       })
   }

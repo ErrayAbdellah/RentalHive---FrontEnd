@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { EquipmentComponent } from './components/equipment/equipment.component';
 import { HttpClientModule } from '@angular/common/http';
-
 import { ContractComponent } from './components/contract/contract.component';
 import { ReservationComponent } from './reservation/reservation/reservation.component';
+import { DemandeComponent } from './components/demande/demande.component';
+import { DevisComponent } from './components/devis/devis.component';
 
 
 @NgModule({
@@ -20,6 +20,8 @@ import { ReservationComponent } from './reservation/reservation/reservation.comp
     EquipmentComponent,
     ContractComponent,
     ReservationComponent,
+    DemandeComponent,
+    DevisComponent,
   ],
   imports: [
     BrowserModule,
