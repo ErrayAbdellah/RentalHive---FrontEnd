@@ -11,7 +11,7 @@ export class UpdateEquipmentService {
 
   onInite(){}
 
-  getEquipmentById():Equipment{
-    return this.http.get() ;
-  }
+  // getEquipmentById():Equipment{
+    // return this.http.get() ;
+  // }
 }
