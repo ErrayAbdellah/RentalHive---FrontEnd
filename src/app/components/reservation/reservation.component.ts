@@ -10,6 +10,8 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class ReservationComponent implements OnInit {
   reservations: any[] = [];
+  filteredReservations: any[] = [];
+  searchState: string = '';
 
   constructor(private demandeService: DemandeService) {}
 
@@ -21,11 +23,22 @@ export class ReservationComponent implements OnInit {
     this.demandeService.getReservations().subscribe(
       (data) => {
         this.reservations = data;
+        this.filteredReservations = [...this.reservations];
       },
       (error) => {
-        console.error('Error loading reservations:', error);
+        console.error('Error loading Reservations:', error);
       }
     );
   }
 
+  searchDemandesByState(): void {
+    if (!this.searchState) {
+      this.filteredReservations = [...this.reservations];
+      return;
+    }
+
+    this.filteredReservations = this.reservations.filter(reservation =>
+      reservation.state.toLowerCase().includes(this.searchState.toLowerCase())
+    );
+  }
 }

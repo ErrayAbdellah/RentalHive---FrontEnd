@@ -9,7 +9,7 @@ import { EquipmentComponent } from './components/equipment/equipment.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { ReservationFormComponent } from './components/reservation/reservation-form/reservation-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormGroup} from '@angular/forms';
 
 @NgModule({
   declarations: [
