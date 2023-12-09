@@ -28,13 +28,4 @@ export class ReservationComponent implements OnInit {
     );
   }
 
-  private initializeDataTable() {
-    $(document).ready(function () {
-      $('#data-table').DataTable({
-        scrollX: true,
-        info: false,
-        responsive: true,
-      });
-    });
-  }
 }
