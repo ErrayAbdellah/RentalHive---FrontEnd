@@ -1,4 +1,4 @@
-export interface Equipment {
+export class Equipment {
     equipmentId: number;
     name: string;
     price: number;

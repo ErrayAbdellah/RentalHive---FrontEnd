@@ -40,4 +40,5 @@ export class EquipmentComponent implements OnInit {
     
     this.router.navigate(['/reservation-form']);
   }
+  
 }
