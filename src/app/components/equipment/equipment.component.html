@@ -1,7 +1,34 @@
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <h1 class="fw-bold text-color pb-3">Equipments</h1>
-    <div *ngFor="let equipment of equipmentList">
-        <div>{{ equipment.name }}</div>
-        <div>{{ equipment.price }}</div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 mt-5">
+        <div class="col" *ngFor="let equipment of equipmentList">
+            <div class="card card-menu btn bg-white mb-3 p-0" style="background-color: white !important;">
+                <div class="">
+                    <img [src]="equipmentUrl" class="img-fluid img-form" />
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body text-start">
+                    <div class="d-flex gap-4">
+                        <h5 class="card-title font-weight-bold"><a>{{ equipment.name }}</a></h5>
+                        <p><span class="fw-bolder">|</span></p>
+                        <p class="mb-2">Price $ • {{ equipment.price }}</p>
+                    </div>
+                    <p class="card-text">
+                        Ducimus voluptatum ullam ad, 
+                        eos earum eius molestiae sed, beatae inventore? Mollitia atque nulla tempore asperiores odio esse nihil aperiam!
+                    </p>
+                    <hr class="my-4" />
+                    <div class="d-flex gap-3">
+                        <p class="lead fw-bold">Category</p>
+                        <div class="chip"><span class="chip-content">{{ equipment.category }}</span></div>
+                    </div>
+                    <button class="btn btn-outline-primary btn-rounde rounded-4 btn-block my-4 z-depth-0 w-75 fs-6"
+                    type="submit">Reserve</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

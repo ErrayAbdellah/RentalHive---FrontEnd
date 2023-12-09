@@ -1,29 +1,35 @@
-
-<div class = "row">
-  <h2> Contract List</h2>
+<div class="row">
+  <h2>Contract List</h2>
 </div>
 
-<table class = "table table-striped table-bordered">
+<table class="table table-striped table-bordered">
   <thead>
-      <tr>
-          <th></th>
-          <th> contractID </th>
-          <th> contractDescription </th>
-          <th> contract status</th>
-          <th> contractEndDate</th>
-          <th> contractID </th>
-          <th> Actions </th>
-      </tr>
+    <tr>
+      <th>Contract ID</th>
+      <th>Contract Description</th>
+      <th>Contract Ref Code</th>
+      <th>Contract Status</th>
+      <th>Condition Description</th>
+      <th>Condition State</th>
+      <th>Condition Body</th>
+      <th>Devis Total Price</th>
+      <th>Devis Comment</th>
+      <th>Actions</th>
+    </tr>
   </thead>
   <tbody>
-      <tr *ngFor = "let contract of contracts" >
-          <td> {{ contract.contractId }} </td>
-          <td> {{  contract.description}} </td>
-          <td>{{contract.status}}</td>
-          <td> {{ contract.StartDate}} </td>
-          <td> {{ contract.EndDate }} </td>
-          <td>
-          </td>
-      </tr>
+    <tr *ngFor="let contract of contracts">
+      <td>{{ contract.id }}</td>
+      <td>{{ contract.description }}</td>
+      <td>{{ contract.ref_code }}</td>
+      <td>{{ contract.status }}</td>
+      <td>{{ contract.conditions[0]?.description }}</td>
+      <td>{{ contract.conditions[0]?.state }}</td>
+      <td>{{ contract.conditions[0]?.body }}</td>
+      <td>{{ contract.devis[0]?.totalPrix }}</td>
+      <td>{{ contract.devis[0]?.commentaire }}</td>
+      <td>
+      </td>
+    </tr>
   </tbody>
 </table>

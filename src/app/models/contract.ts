@@ -1,8 +1,11 @@
+import { Time } from "@angular/common";
+
 export interface Contract {
-  contractId : number,
+  Id : number,
   description : string,
   ref_code : string,
   status : string,
-  StartDate : Date,
-  EndDate : Date,
+  StartDate : Time,
+  EndDate : Time,
+
  }

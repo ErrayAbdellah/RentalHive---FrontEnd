@@ -7,7 +7,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { EquipmentComponent } from './components/equipment/equipment.component';
 import { HttpClientModule } from '@angular/common/http';
+
 import { ContractComponent } from './components/contract/contract.component';
+import { ReservationComponent } from './reservation/reservation/reservation.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { ContractComponent } from './components/contract/contract.component';
     NavbarComponent,
     HomePageComponent,
     EquipmentComponent,
-    ContractComponent
+    ContractComponent,
+    ReservationComponent,
   ],
   imports: [
     BrowserModule,
