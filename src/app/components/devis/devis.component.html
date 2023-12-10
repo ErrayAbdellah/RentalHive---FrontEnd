@@ -1,1 +1,22 @@
-<p>devis works!</p>
+<div class="container mt-4">
+  <h2>List of Devis</h2>
+
+  <div *ngFor="let devisItem of DevisList" class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Devis ID: {{ devisItem.devisId }}</h5>
+      <p class="card-text">Demande Reference: {{ devisItem.demande.reference }}</p>
+      <p class="card-text">Demande Date: {{ devisItem.demande.demande_date | date }}</p>
+      <p class="card-text">Total Price: {{ devisItem.totalPrix | currency }}</p>
+
+        
+      <div *ngIf="devisItem.approved" class="alert alert-success" role="alert">
+        Approved
+      </div>
+      <div *ngIf="!devisItem.approved" class="alert alert-danger" role="alert">
+        Declined
+      </div>
+
+
+    </div>
+  </div>
+</div>

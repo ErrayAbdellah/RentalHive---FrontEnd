@@ -25,8 +25,6 @@ export class ContractComponent implements OnInit{
     this.contratService.getContractlist().subscribe(data=>
       {
         this.contracts = data;
-
-
       })
   }
 

@@ -16,14 +16,7 @@ export class SaveEquipmentComponent {
   constructor(private service:SaveEquipmentService,private fireStorage:AngularFireStorage  ){
    this.equipment = new Equipment();
   }
-  // onSubmit() {
-    // const fileInput = document.getElementById('image_equipment') as HTMLInputElement;
-
-    // console.log("****************************")
-    // console.log((fileInput.files as FileList)[0] );
-    // console.log("****************************")
-    
-    // }
+  
 
     onSubmit() {
       const fileInput = document.getElementById('image_equipment') as HTMLInputElement;
@@ -56,7 +49,7 @@ export class SaveEquipmentComponent {
       // };
       // reader.readAsDataURL(file);
     }
-  
+
    private saveEquipment(){
     this.service.onSave(this.equipment).subscribe(
       response => {
@@ -69,5 +62,5 @@ export class SaveEquipmentComponent {
       }
     );
   }
-  
+
 }

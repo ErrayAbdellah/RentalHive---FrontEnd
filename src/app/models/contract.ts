@@ -7,5 +7,6 @@ export interface Contract {
   status : string,
   StartDate : Time,
   EndDate : Time,
+  state: string
 
  }
