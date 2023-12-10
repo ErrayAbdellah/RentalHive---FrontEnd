@@ -1,0 +1,8 @@
+<form>
+  <div *ngFor="let condition of conditions" class="form-group">
+    <label for="condition_{{ condition.id }}">{{ condition.description }}</label>
+    <input type="text" id="condition_{{ condition.id }}" name="condition_{{ condition.id }}" [(ngModel)]="condition.userInput" class="form-control">
+  </div>
+
+  <button (click)="onApproveDevis()">Approve Devis</button>
+</form>

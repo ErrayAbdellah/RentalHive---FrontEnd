@@ -12,9 +12,13 @@ import { DevisComponent } from './components/devis/devis.component';
 import { SaveEquipmentComponent } from './components/save-equipment/save-equipment.component';
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireStorageModule} from '@angular/fire/compat/storage'
+import { ReservationComponent } from './components/reservation/reservation.component';
 import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
 import { UpadteEquipmentComponent } from './components/upadate-equipment/upadate-equipment.component';
+import { ReservationFormComponent } from './components/reservation/reservation-form/reservation-form.component';
+import { ApprovalButtonComponent } from './components/approval-button/approval-button.component';
+import { ApprovalModalComponent } from './components/approval-modal/approval-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,16 +31,22 @@ import { UpadteEquipmentComponent } from './components/upadate-equipment/upadate
     DevisComponent,
     SaveEquipmentComponent,
     UpadteEquipmentComponent,
+    ReservationComponent,
+    ReservationFormComponent,
+    ApprovalButtonComponent,
+    ApprovalModalComponent,
+
   ],
   imports: [
-  [BrowserModule, FormsModule],
+    BrowserModule,
+     FormsModule,
     AppRoutingModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
-    FormsModule,
+
   ],
-  providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
