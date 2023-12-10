@@ -5,6 +5,7 @@ import { EquipmentComponent } from './components/equipment/equipment.component';
 import { ContractComponent } from './components/contract/contract.component';
 import { ReservationFormComponent } from './components/reservation/reservation-form/reservation-form.component';
 import { DevisComponent } from './components/devis/devis.component';
+import { ReservationComponent } from './components/reservation/reservation.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'contracts', component: ContractComponent },
   {path: 'devis',component:DevisComponent},
   { path: 'reservation-form', component: ReservationFormComponent},
+  { path: 'reservation', component: ReservationComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

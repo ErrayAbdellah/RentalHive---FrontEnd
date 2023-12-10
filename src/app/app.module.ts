@@ -13,8 +13,6 @@ import { SaveEquipmentComponent } from './components/save-equipment/save-equipme
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { environment } from 'src/environments/environment';
-import { ReservationComponent } from './components/reservation/reservation/reservation.component';
-import { ReservationFormComponent } from './components/reservation/reservation-form/reservation-form.component';
 import { FormsModule } from '@angular/forms';
 import { UpadteEquipmentComponent } from './components/upadate-equipment/upadate-equipment.component';
 
@@ -28,7 +26,6 @@ import { UpadteEquipmentComponent } from './components/upadate-equipment/upadate
     DemandeComponent,
     DevisComponent,
     SaveEquipmentComponent,
-    ReservationFormComponent,
     UpadteEquipmentComponent,
   ],
   imports: [
