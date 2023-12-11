@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { ReservationFormComponent } from './components/reservation/reservation-form/reservation-form.component';
 import { FormsModule, FormGroup} from '@angular/forms';
+import { DevisComponent } from './components/devis/devis.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule, FormGroup} from '@angular/forms';
     EquipmentComponent,
     ReservationComponent,
     ReservationFormComponent,
+    DevisComponent,
   ],
   imports: [
   [BrowserModule, FormsModule],

@@ -1,0 +1,21 @@
+<main class="container mt-5 mb-5">
+    <h1 class="fw-bold text-color pb-3">Reservations</h1>
+    <div class="main-dash mt-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Demande ID</th>
+                    <th>Total Prix</th>
+                    <th>Commentaire</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let devis of devisResponse.data">
+                    <td>{{devis.demande.demandeID}}</td>
+                    <td>{{devis.totalPrix}}</td>
+                    <td>{{devis.commentaire}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
