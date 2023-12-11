@@ -26,9 +26,13 @@
             <td *ngFor="let eq of reservation.equipment">{{ eq.name }}</td>
             <td>{{ reservation.priorite }}</td>
             <td>{{ reservation.state }}</td>
-            <td>
-              <button class="btn btn-success" (click)="generateDevis(reservation.demandeID)">Generate Devis</button>
-          </td>
+            
+          <td  *ngIf="reservation.devisExists">
+            <button class="btn btn-light" >Devis Already Exists</button>
+        </td>
+          <td *ngIf="!reservation.devisExists">
+            <button class="btn btn-success" (click)="generateDevis(reservation.demandeID)">Generate Devis</button>
+        </td>
           </tr>
         </tbody>
       </table>

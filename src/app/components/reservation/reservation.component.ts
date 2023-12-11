@@ -14,11 +14,14 @@ export class ReservationComponent implements OnInit {
   reservations: any[] = [];
   filteredReservations: any[] = [];
   searchState: string = '';
+  isDevisExists: Boolean = true; 
 
   constructor(private demandeService: DemandeService, private devisService: DevisService) {}
 
   ngOnInit(): void {
     this.loadReservations();
+   
+    
   }
 
   loadReservations(): void {
@@ -55,4 +58,6 @@ export class ReservationComponent implements OnInit {
       }
     );
   }
+
+
 }

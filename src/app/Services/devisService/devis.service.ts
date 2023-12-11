@@ -31,4 +31,9 @@ export class DevisService {
     return this.http.post<Devis>(url, {});
   }
 
+  isDevisExists(demandeId: number): Observable<Boolean>{
+    const checkUrl = `${this.apiUrl}/devis/demandes/${demandeId}/devis/exists`;
+    return this.http.get<Boolean>(checkUrl);
+  }
+
 }
