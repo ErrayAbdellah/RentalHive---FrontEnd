@@ -1,21 +1,30 @@
+<!-- devis.component.html -->
 <main class="container mt-5 mb-5">
-    <h1 class="fw-bold text-color pb-3">Reservations</h1>
+    <h1 class="fw-bold text-color pb-3">Devis</h1>
     <div class="main-dash mt-5">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Demande ID</th>
-                    <th>Total Prix</th>
-                    <th>Commentaire</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let devis of devisResponse.data">
-                    <td>{{devis.demande.demandeID}}</td>
-                    <td>{{devis.totalPrix}}</td>
-                    <td>{{devis.commentaire}}</td>
-                </tr>
-            </tbody>
-        </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Demande ID</th>
+            <th>Total Prix</th>
+            <th>Commentaire</th>
+            <th>Status</th>
+            <th>Action</th> <!-- New column for the action button -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let devis of devisResponse.data">
+            <td>{{ devis.demande.demandeID }}</td>
+            <td>{{ devis.totalPrix }}</td>
+            <td>{{ devis.commentaire }}</td>
+            <td>{{ devis.approved ? 'Approved' : 'Pending' }}</td>
+            <td>
+              <!-- Button to trigger the approve action -->
+              <button (click)="approveDevis(devis)" [disabled]="devis.approved">Approve</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</main>
+  </main>
+  

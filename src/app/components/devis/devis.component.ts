@@ -23,4 +23,15 @@ export class DevisComponent implements OnInit {
       }
     );
   }
+
+  approveDevis(devis: Devis): void{
+    this.devisService.approveDevis(devis).subscribe(
+      (approvedDevis)=>{
+        console.log(" success ")
+      },
+      (error)=>{
+        console.error("something went wrong")
+      }
+    );
+  }
 }
