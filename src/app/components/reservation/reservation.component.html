@@ -15,6 +15,7 @@
             <th>Equipment Name</th>
             <th>Priorité</th>
             <th>State</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -22,9 +23,12 @@
             <td>{{ reservation.user.name }}</td>
             <td>{{ reservation.demande_date | date: 'yyyy-MM-dd' }}</td>
             <td>{{ reservation.date_retour | date: 'yyyy-MM-dd' }}</td>
-            <td>{{ reservation.equipment[0].name }}</td>
+            <td *ngFor="let eq of reservation.equipment">{{ eq.name }}</td>
             <td>{{ reservation.priorite }}</td>
             <td>{{ reservation.state }}</td>
+            <td>
+              <button class="btn btn-success" (click)="generateDevis(reservation.demandeID)">Generate Devis</button>
+          </td>
           </tr>
         </tbody>
       </table>

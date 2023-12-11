@@ -26,4 +26,9 @@ export class DevisService {
     return this.http.post<string>(approvalUrl, {});
   }
 
+  createDevis(demandeID: number): Observable<Devis>{
+    const url = `${this.apiUrl}/devis/demandes/${demandeID}/devis`;
+    return this.http.post<Devis>(url, {});
+  }
+
 }

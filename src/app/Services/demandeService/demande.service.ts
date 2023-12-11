@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Demande } from 'src/app/models/demande';
 import { environment } from 'src/environments/environment';
+import { Devis } from 'src/app/models/devis';
 
 @Injectable({
   providedIn: 'root'
@@ -27,4 +28,6 @@ export class DemandeService {
     const params = new HttpParams().set('state', state);
     return this.http.get<Demande[]>(url, { params });
 }
+
+  
 }

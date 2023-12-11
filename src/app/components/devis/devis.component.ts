@@ -34,4 +34,8 @@ export class DevisComponent implements OnInit {
       }
     );
   }
+
+  createDevis(demandeID: number){
+    this.devisService.createDevis(demandeID);
+  }
 }

@@ -1,3 +1,5 @@
+import { Equipment } from "./equipment";
+
 export interface Demande {
     userId: number;
     demandeID?: number;
@@ -7,4 +9,5 @@ export interface Demande {
     priorite: string;
     state: string;
     equipmentIds: number[];
+    equipments ?: Equipment[];
 }
