@@ -13,7 +13,7 @@ export class UpadteEquipmentComponent {
 
    equipment: Equipment;
    categories: string[] = ['Office', 'Event', 'Construction'];
-    userId:string ;
+    id:number ;
   constructor(private service:UpdateEquipmentService,private route: ActivatedRoute,private fireStorage:AngularFireStorage){}
 
   // ngOnInit() {
@@ -30,15 +30,15 @@ export class UpadteEquipmentComponent {
 
     console.log("hello");
     this.route.params.subscribe(params => {
-      this.userId = params['id'];
+      this.id = params['id'];
       // Perform actions based on the user ID
-      console.log('User ID:', this.userId);
-      this.getEquipmentById();
+      console.log('User ID:', this.id);
+      this.getEquipmentById(this.id);
     });
   }
 
-  getEquipmentById():void{
-    this.service.getEquipmentById().subscribe(
+  getEquipmentById(id:number):void{
+    this.service.getEquipmentById(id).subscribe(
       (data) => {
       this.equipment = data;
       console.log(this.equipment);
@@ -84,7 +84,7 @@ export class UpadteEquipmentComponent {
   }
 
  private saveEquipment(){
-  this.service.updateEquipment(this.equipment).subscribe(
+  this.service.updateEquipment(this.equipment,this.id).subscribe(
     response => {
       // Handle successful response
       console.log('Equipment saved successfully:', response);
@@ -94,6 +94,18 @@ export class UpadteEquipmentComponent {
       console.error('Error saving equipment:', error);
     }
   );
+  }
+
+  onDeleteClick(id: number): void {
+    console.log("hellllllo"+id)
+    this.service.deleteEquipment(id).subscribe(
+      () => {
+        console.log('Equipment deleted successfully');
+      },
+      (error) => {
+        console.error('Error deleting equipment', error);
+      }
+    );
   }
 
 }
